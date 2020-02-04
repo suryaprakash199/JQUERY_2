@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="added.js"></script>
+  <script src="https://unpkg.com/css-doodle@0.7.7/css-doodle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="neon.css">
+  
+</head>
+<body>
+
+	<css-doodle grid="5" class="doodle">
+    :doodle {
+        @grid: 35 / 100vmax;
+    }
+    background: @pick(#29B6F6, #FDD835, #5E35B1, #FFCCBC, #E8EAF6, #B2DFDB, #1B5E20, #2979FF);
+    opacity: @r(.9);
+    clip-path: polygon(
+        @rand(50%) 0, 50% @rand(70%), 0 @rand(100%)
+    );
+    
+    animation: test infinite @r(100s, 150s) linear;
+    
+    @keyframes test {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+        50% {
+            transform: translate3d(@r(-500%, 1000%), @r(-500%, 1000%), 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</css-doodle>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-4"></div>
+		<div class="col-4 py-5"><span class="title-holder">
+ <span class="title">
+  Adding_&_Deleting_Elements_!  
+ </span>
+</span></div>
+<div class="col-4"></div>
+	</div>
+	<div class="row py-5">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+		<form id="myform">
+			<div class="field">
+			<input type="text" name="" class="control-form" id="content">
+			<label><b class="text-white">Enter Details</b></label>
+			</div>
+		</form>
+       	<div class="mx-auto text-center py-4 "><a href="#">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span><button type="button" id="botton" style="color: grey; background-color: darkgrey;" name="button">
+	
+	SUBMIT	
+</button></a></div>
+	</div>
+	<div class="col-lg-4"></div>
+</div>
+		<div class="container row mx-auto text-center">
+	
+	<div class="col lg-5  py-3 lefts py-5 mb-4 mx-auto text-center text-white font-weight-bolder">
+			<h3 >Showing Display Results</h3>
+		<ul id="first"></ul>
+        
+	</div>
+	<div class="col-lg-2"></div>
+	<div class="col-lg-5 rights py-5 mx-auto text-center text-white font-weight-bolder">
+		<h3>Showing Saved Results</h3>
+		<ul id="result"></ul>
+	</div>
+	
+     </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: consolas;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	background: #050801;
+
+}
+a{
+	position: relative;
+	display: inline-block;
+	padding: 5px ;	
+	color: #03e9f4;
+	font-family: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5%;
+    letter-spacing: 4px;
+
+}
+a:hover
+{
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4,
+	            0 0 25px #03e9f4,
+	            0 0 50px #03e9f4,
+	            0 0 200px #03e9f4;
+}
+a span{
+	position: absolute;
+	display: block;
+}
+a span:nth-child(1) 
+{
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 2px;
+ background: linear-gradient(90deg,transparent,#03e9f4);
+ animation: animate1 1s linear infinite;
+
+}
+@keyframes animate1
+{
+	0%{left: -100%;}
+	50%,100%{left: 100%;}
+}
+
+a span:nth-child(2) 
+{
+ top: -100%;
+ right: -100%;
+ width: 2px;
+ height: 2px;
+ background: linear-gradient(180deg,transparent,#03e9f4);
+ animation: animate2 2s linear infinite;
+ animation-delay: 0.25s;
+
+}
+@keyframes animate2
+{
+	0%{top: -100%;}
+	50%,100%{top: 100%;}
+}
+a span:nth-child(3) 
+{
+ bottom: 0;
+ right: -100%;
+ width: 100%;
+ height: 2px;
+ background: linear-gradient(270deg,transparent,#03e9f4);
+ animation: animate3 2s linear infinite;
+ animation-delay: 0.5s;
+
+}
+@keyframes animate3
+{
+	0%{right: -100%;}
+	50%,100%{right: 100%;}
+}
+a span:nth-child(4) 
+{
+ bottom: -100%;
+ left: 0;
+ width: 2px;
+ height: 100%;
+ background: linear-gradient(360deg,transparent,#03e9f4);
+ animation: animate4 2s linear infinite;
+ animation-delay: 0.75s;
+
+}
+@keyframes animate4
+{
+	0%{bottom: -100%;}
+	50%,100%{bottom: 100%;}
+}
+ul{
+  		list-style: none;
+  	}
+
+  	  	.doodle {
+    position: fixed;
+    z-index: -1;
+}
+  	body {
+  background-color: #296da0;
+}
+.bbn{
+	overflow: hidden;
+}
+
+.title {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px;
+  color: #f9d566;
+  width: 0;
+  overflow: hidden;
+  white-space: no-wrap;
+  display:block;
+  border-right: 3px solid #f9d566;
+  animation: typewriter 5s steps(7) infinite, blinking-cursor 0.8s infinite;
+  animation-fill-mode: forwards
+}
+
+@keyframes typewriter {
+  0% { width:0 }
+  25% { width: 70% }
+  48% { width: 100% }
+  50% { width: 100% }
+  55% { width: 100% }
+  75% { width: 70%; }
+  85% { width: 30%; }
+  100% { width: 0; }
+}
+
+
+
+  	.btn {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 6px 8px;
+  font-size: 8px;
+  cursor: pointer;
+  border-radius:60px;
+}
+
+.btns {
+  background-color: RoyalBlue;
+}
+
+input{
+	border: 0;
+	border-bottom: 2px solid blue;	
+	outline:none;
+}
+.field {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  order: -1;
+  font-size: 20px;
+  padding-left: 5px;
+  transition: all 0.3s ease-in;
+  transform: translateY(30px);
+  pointer-events: none;
+}
+input:focus + label  {
+  transform: translateY(1px);
+}
+
+
+.lefts{
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+ 		width: 100%;
+
+
+}
+.rights{
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+ 		width: 100%;
+}
